@@ -2,6 +2,8 @@ version: "3.9"
 services:
   kali:
     build: .
+    ports:
+      - "80:60000"
     container_name: kali
     volumes:
       - .:/usr/src/app
