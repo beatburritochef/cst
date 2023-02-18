@@ -1,5 +1,6 @@
 FROM kalilinux/kali-rolling
 LABEL author=TripVsFlow
-RUN apt update && apt -y install kali-linux-headless
+#RUN apt update && apt -y install kali-linux-headless # hangs type in terminal.
 WORKDIR /usr/src/app/
-CMD ["/bin/bash", "echo", "Hello World"]
+COPY ./*  .
+CMD ["/bin/bash"]
